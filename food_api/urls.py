@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.urls import path
+from yelp.views import YelpProxy
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^', YelpProxy.as_view(), name='yelp-api'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

@@ -125,6 +125,15 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
+}
+
+REST_PROXY = {
+    'HOST': 'https://api.yelp.com/v3',
+    'AUTH': {
+        'user': None,
+        'password': None,
+        'token': 'Bearer fWYVUaCDJWAxd_c7tTuf2CigtmDfqnk9OEsHm6g9zpapZFRumUlwh160WS9vQ7hSfhZEamQUlPxRRdQ7tN9FZuybIPc19T7SUrV1AekeO26r1ctuy8_7iegI8bcyWnYx',
+    },
 }
